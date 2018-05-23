@@ -6,7 +6,7 @@ import { View, Text, StyleSheet, TextInput } from "react-native";
 export default class NumberInput extends Component {
 
   //local state for inputfield.
-  
+
   constructor(props){
     super(props)
     this.state = {
@@ -33,8 +33,6 @@ const styles = StyleSheet.create({
   inputField: {
     height: 40,
     width: "95%",
-    borderColor: "gray",
-    borderWidth: 1,
     backgroundColor: "#fff"
   }
 });

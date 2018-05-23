@@ -1,15 +1,19 @@
 /* @flow */
 
 import React, { Component } from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-native";
 
-import NumberInput from '../components/numberInput'
+import NumberInput from "../components/numberInput";
+import SubmitButton from '../components/submitButton'
+
+
 
 export default class MainScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
         <NumberInput/>
+        <SubmitButton/>
       </View>
     );
   }
