@@ -1,17 +1,15 @@
 /* @flow */
 
-import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-} from 'react-native';
+import React, { Component } from "react";
+import { View, Text, StyleSheet, TextInput } from "react-native";
+
+import NumberInput from '../components/numberInput'
 
 export default class MainScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>I'm the MainScreen component</Text>
+        <NumberInput/>
       </View>
     );
   }
@@ -20,5 +18,8 @@ export default class MainScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
+    backgroundColor: "#1EBAA5",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
