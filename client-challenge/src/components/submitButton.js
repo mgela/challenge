@@ -9,13 +9,10 @@ import {
 } from 'react-native';
 
 export default class SubmitButton extends Component {
-checkworking = ()=> {
-  console.log('working');
-}
 
   render() {
     return (
-      <TouchableOpacity onPress={this.checkworking}>
+      <TouchableOpacity onPress={this.props.sendNumber}>
         <Text style={styles.button}>Submit</Text>
       </TouchableOpacity>
     );

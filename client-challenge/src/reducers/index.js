@@ -1,23 +1,20 @@
 //redux
-import {combineReducers} from 'redux';
+import { combineReducers } from "redux";
 
 //Initial States for reducers
-const numberToPhoneWords = { number: 23333}
-
+const numberToPhoneWords = { words: null };
 
 ///////////////=========== REDUCERS
 
 const convertNumber = (state = numberToPhoneWords, action) => {
   switch (action.type) {
-    case 'CONVERT':
+    case "CONVERT":
       return state;
     default:
-    return state;
+      return state;
   }
-}
-
-
+};
 
 export const reducers = combineReducers({
   convertNumber: convertNumber
-})
+});
