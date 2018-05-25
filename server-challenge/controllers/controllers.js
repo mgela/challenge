@@ -1,14 +1,11 @@
-const convertWords = require('../algorithm.js')
+const convertWords = require("../algorithm.js");
 
-exports.converter =  (req, res) => {
+exports.converter = (req, res) => {
   try {
-    console.log(typeof req.body.number);
-    const number = req.body.number
-    const combis = convertWords.findWords(number)
-    res.send(combis)
+    const number = req.body.number;
+    const combis = convertWords.findWords(number);
+    res.send(combis);
   } catch (e) {
-
-  } finally {
-
+    console.log(e);
   }
-}
+};
