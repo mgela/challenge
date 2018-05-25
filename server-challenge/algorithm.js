@@ -1,5 +1,4 @@
 
-
 exports.findWords = (digits)=> {
   digits = digits.split("");
   //hardcode 0 and 1
