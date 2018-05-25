@@ -1,21 +1,18 @@
 /* @flow */
 
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity
-} from "react-native";
+import { View } from "react-native";
 import { connect } from "react-redux";
+//thunk
+import { getWords } from "../actions/index";
+//components
 import NumberInput from "../components/numberInput";
 import SubmitButton from "../components/submitButton";
-import { getWords } from "../actions/index";
+import ListItems from "../components/listItems";
+//styles
+import { styles } from "./styles";
 
 class MainScreen extends Component {
-  //local state for small input component,
-  //keeping it in parent as submitButton and input are siblings.
   constructor(props) {
     super(props);
     this.state = {
@@ -32,29 +29,23 @@ class MainScreen extends Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <View style={styles.container}>
         <NumberInput updateState={this.inputState} />
         <SubmitButton sendNumber={this.generateWords} />
+        <ListItems words={this.props.words} />
       </View>
     );
   }
 }
+
 const mapStateToProps = state => ({
-  numberToPhoneWords: state.convertNumber
+  words: state.wordList.words
 });
 
 const mapDispatchToProps = dispatch => ({
-  getWords: (data) => dispatch(getWords(data))
-});
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#1EBAA5",
-    alignItems: "center",
-    justifyContent: "center"
-  }
+  getWords: data => dispatch(getWords(data))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainScreen);

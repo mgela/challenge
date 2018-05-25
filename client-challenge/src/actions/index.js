@@ -13,7 +13,7 @@ export function getWords(number) {
             }
         }).then(
       response => response.json().then(res =>
-        dispatch({ type: 'CONVERT', res })
+        dispatch({ type: 'CONVERTED', res })
       )
     )
   }

@@ -8,7 +8,7 @@ const words = { words: null };
 
 const wordList = (state = words, action) => {
   switch (action.type) {
-    case "CONVERT":
+    case "CONVERTED":
       return {
         words: action.res
       };
