@@ -1,7 +1,6 @@
 /* @flow */
-
 import React, { Component } from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import { connect } from "react-redux";
 //thunk
 import { getWords } from "../actions/index";
@@ -9,7 +8,7 @@ import { getWords } from "../actions/index";
 import NumberInput from "../components/numberInput";
 import SubmitButton from "../components/submitButton";
 import ListItems from "../components/listItems";
-import LoaderAnimation from "../components/loader"
+import LoaderAnimation from "../components/loader";
 //styles
 import { styles } from "./styles";
 
@@ -27,18 +26,21 @@ class MainScreen extends Component {
 
   generateWords = () => {
     this.props.getWords(this.state);
+    //reset input field on submit
+    this.setState({number: ''})
   };
 
-  renderLoader = ()=> {
-    if (!this.props.isLoading) return <ListItems words={this.props.words} />
-    return <LoaderAnimation/>  
-  }
+  renderLoader = () => {
+    if (!this.props.isLoading) return <ListItems words={this.props.words} />;
+    return <LoaderAnimation />;
+  };
 
   render() {
-    console.log(this.props);
+    console.log(this.refs);
     return (
       <View style={styles.container}>
-        <NumberInput updateState={this.inputState} />
+        <Text style={styles.header}>Coding Challenge</Text>
+        <NumberInput  updateState={this.inputState} number={this.state.number}/>
         <SubmitButton sendNumber={this.generateWords} />
         {this.renderLoader()}
       </View>

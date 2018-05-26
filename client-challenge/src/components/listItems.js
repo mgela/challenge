@@ -9,9 +9,7 @@ export default class ListItems extends Component {
 
   renderItem = ({ item }) => (
     <View style={styles.wordItem}>
-      <Text style={styles.wordText} key={item}>
-        {item}
-      </Text>
+      <Text style={styles.wordText} key={item}>{item}</Text>
     </View>
   );
 

@@ -3,8 +3,9 @@ import {StyleSheet} from 'react-native'
 
 export const styles = StyleSheet.create({
   listWrapper: {
-    width: '90%',
-    height: '80%',
+    width: '85%',
+    height: 'auto',
+    marginTop: 20,
     backgroundColor: 'transparent',
   },
   wordItem: {
@@ -12,7 +13,10 @@ export const styles = StyleSheet.create({
     width: 70
   },
   wordText: {
-    color: "#fff"
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: 'bold',
+    letterSpacing: 1
   },
   inputField: {
     height: 40,
@@ -20,11 +24,21 @@ export const styles = StyleSheet.create({
     backgroundColor: "#fff",
     marginTop: '10%'
   },
-  button: {
+  buttonWrapper: {
     marginTop: 15,
-    marginBottom: 20,
+    borderColor: "#fff",
+    borderWidth: 1,
+    width: '30%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '5%'
+
+  },
+  button: {
     color: '#fff',
     fontSize: 18,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    letterSpacing: 1
   }
 })
