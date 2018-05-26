@@ -7,6 +7,7 @@ import { styles } from "./styles";
 
 export default class NumberInput extends Component {
   render() {
+    console.log(this.props);
     return (
       <TextInput
         style={styles.inputField}
@@ -14,6 +15,7 @@ export default class NumberInput extends Component {
         placeholder="Enter your number"
         placeholderTextColor="#1EBAA5"
         onChangeText={this.props.updateState}
+        value={this.props.number}
       />
     );
   }

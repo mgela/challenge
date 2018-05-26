@@ -4,16 +4,17 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#1EBAA5",
-    alignItems: "center",
+    alignItems: "center"
   },
   wordItem: {
     height: 40,
     width: 70
   },
-  listWrapper: {
-    width: '100%',
-    height: '80%',
-    backgroundColor: 'purple',
-
+  header: {
+    color: '#fff',
+    fontSize: 20,
+    marginTop: 24,
+    fontWeight: 'bold',
+    letterSpacing: 1
   }
 });
