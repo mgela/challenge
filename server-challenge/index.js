@@ -10,11 +10,12 @@ const cors = require('cors');
 
 
 
+const port = process.env.PORT ||  8000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors('*'));
 app.use(router);
-app.listen(process.env.PORT ||  4000, function(){
-  console.log('running @4000');
+app.listen(port, function(){
+  console.log('running' + port);
 })
