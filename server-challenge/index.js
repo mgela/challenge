@@ -19,3 +19,5 @@ app.use(router);
 app.listen(port, function(){
   console.log('running' + port);
 })
+
+// module.exports = server
